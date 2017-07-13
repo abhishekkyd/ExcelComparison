@@ -26,6 +26,7 @@ public class WriteDataToExcel {
 
 			XSSFSheet sheet = workbook.getSheetAt(0);
 
+			//reading text file to get all lines
 			String line = null;
 			int num = 0;
 			List<String> lines = new ArrayList<String>();
@@ -34,15 +35,13 @@ public class WriteDataToExcel {
 			while ((line = bufferedReader.readLine()) != null) {
 				lines.add(line);
 			}
+			
+			//Start reading value from
+			int startIndex = 17;
 
-			for (int i = -1; i <= lines.size(); i += 2) {
-				if (num == 0) {
-					XSSFCell col = sheet.getRow(1).createCell(num);
-					col.setCellValue("1");
-				} else {
-					XSSFCell col = sheet.getRow(1).createCell(num);
-					col.setCellValue(lines.get(i));
-				}
+			for (int i = startIndex; i <= lines.size(); i += 2) {
+				XSSFCell col = sheet.getRow(1).createCell(num);
+				col.setCellValue(lines.get(i));
 				num++;
 			}
 

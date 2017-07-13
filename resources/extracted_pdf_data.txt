@@ -1,10 +1,24 @@
-First Name
-Abhishek
-Last Name
-Yadav
-Company
-Hello Selenium
-Website
-http://www.helloselenium.com
-Mobile
-8512888161
+ANZ Banking For Your Business
+SUMMARY PAGE
+You have selected following Products
+Australia and New Zealand
+
+version 20170704
+Page 1 of 12
+ABCD#12345
+Transaction Accounts x 1
+ANZ Banking For Your Business
+Australia and New Zealand
+
+version 20170704
+Page 1 of 12
+ALL PRODUCTS
+INDIVIDUAL/BUSINESS ENTITY 1
+Full Name of Legal Entity
+ABCD#12345
+Entity/Customer Type
+Australian Company
+KYC (ANZ Only)
+ANZ#123
+Business Identifier Number
+123456789

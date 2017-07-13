@@ -35,7 +35,8 @@ public class CompareExcel {
 
 			int num = 1;
 
-			for (int i = 0; i <= 5; i++) {
+			int lastCol = sheet.getRow(0).getLastCellNum();
+			for (int i = 0; i < lastCol; i++) {
 				XSSFCell col = sheet.getRow(1).createCell(i);
 				XSSFCell col1 = sheet1.getRow(1).getCell(i);
 				String expected = null;
@@ -52,15 +53,10 @@ public class CompareExcel {
 					actual = String.valueOf(col2.getNumericCellValue());
 				}
 
-				if (i == 0) {
-					col.setCellValue(num);
+				if (expected.equals(actual)) {
+					col.setCellValue("Pass");
 				} else {
-
-					if (expected.equals(actual)) {
-						col.setCellValue("Pass");
-					} else {
-						col.setCellValue("Fail");
-					}
+					col.setCellValue("Fail");
 				}
 			}
 
